@@ -1,0 +1,22 @@
+.navigation {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+
+    .link {
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+    }
+
+    .link:hover {
+        transform: scale(1.1);
+    }
+
+    .link:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}

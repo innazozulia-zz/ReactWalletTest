@@ -1,0 +1,14 @@
+.user__container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    padding: 20px 5px;
+    background: #fff;
+    border-bottom-right-radius: 40px;
+
+    .user {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+}

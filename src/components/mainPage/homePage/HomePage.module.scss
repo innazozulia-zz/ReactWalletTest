@@ -1,0 +1,48 @@
+.main__container {
+    width: 500px;
+    margin: 50px auto;
+    height: 600px;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+
+
+    .side {
+        width: 30%;
+        background: #faf0ef;
+        height: 100%;
+    }
+
+    .main {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .logo__container {
+            display: flex;
+            padding: 10px 20px;
+
+            .logo {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        .review {
+            background: rgb(186, 186, 240);
+        }
+
+        .sendMoney {
+            background: pink;
+            // display: flex;
+            // flex-direction: row;
+        }
+
+        .senMoneyItem {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    }
+}
