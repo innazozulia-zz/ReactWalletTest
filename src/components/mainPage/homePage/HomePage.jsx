@@ -2,8 +2,10 @@ import React from "react";
 import Navigation from "../navigation/Navigation";
 import User from "../user/User";
 import sendMoney from "../../../assets/sendMoney";
-import style from "./HomePage.module.scss";
 import SendMoney from "../sendMoney/SendMoney";
+import Services from "../services/Services";
+
+import style from "./HomePage.module.scss";
 
 const HomePage = () => {
   return (
@@ -37,6 +39,9 @@ const HomePage = () => {
               />
             ))}
           </div>
+        </div>
+        <div className={style.services}>
+          <Services />
         </div>
       </div>
     </div>

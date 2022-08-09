@@ -2,7 +2,7 @@ const sendMoney = [
   {
     id: 1,
     image: "img/sendMoney/item-0.png",
-    name: "Add new ",
+    name: "Add",
   },
   {
     id: 2,

@@ -1,0 +1,45 @@
+.settings__container {
+    width: 500px;
+    margin: 50px auto;
+    height: 600px;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    box-shadow: rgba(100, 100, 111, 0.2) 25px 30px 29px 0px;
+
+    .side {
+        width: 30%;
+        background: #faf0ef;
+        height: 100%;
+    }
+
+    .main {
+        width: 70%;
+
+        .logo__container {
+            display: flex;
+            padding: 10px 20px;
+
+            .logo {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        .main__content {
+            display: flex;
+            flex-direction: column;
+            margin: 50px 20px;
+
+            .settings__item {
+                padding: 10px 5px;
+                transition: all .2s ease-in-out;
+                cursor: pointer;
+            }
+
+            .settings__item:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}

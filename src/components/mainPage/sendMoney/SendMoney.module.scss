@@ -1,6 +1,17 @@
 .container {
-    .user {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+
+
+
+    .user__cover {
         width: 30px;
         height: 30px;
+    }
+
+    .user__name {
+        margin: 5px 0;
     }
 }

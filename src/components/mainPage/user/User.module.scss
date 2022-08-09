@@ -5,10 +5,23 @@
     padding: 20px 5px;
     background: #fff;
     border-bottom-right-radius: 40px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    .link {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        // margin-bottom: 50px;
+        // padding: 20px 5px;
+    }
 
     .user {
         width: 30px;
         height: 30px;
         margin-right: 10px;
+    }
+
+    .user__name {
+        color: black;
     }
 }

@@ -20,11 +20,11 @@ const SignIn = () => {
     <div className={style.container}>
       <div className={style.side}>
         <div className={style.signIn__cover}>
-          {/* <img
+          <img
             className={style.signIn__cover}
             src="img/signIn/item-2.jpg"
             alt="background"
-          /> */}
+          />
         </div>
       </div>
       <div className={style.main}>
