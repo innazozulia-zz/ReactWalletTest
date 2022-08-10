@@ -1,0 +1,104 @@
+        .flip__card {
+            background-color: transparent;
+            width: 300px;
+            height: 150px;
+            margin-top: 30px;
+            margin-left: 10px;
+            perspective: 1000px;
+
+            .flip__card__inner {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                transition: transform 0.6s;
+                transform-style: preserve-3d;
+
+            }
+
+            // .number {
+            //     margin: 6px 10px;
+            //     font-size: 21px;
+            //     font-weight: 400;
+            //     color: white;
+            // }
+
+            // .date {
+            //     display: flex;
+            //     flex-direction: column;
+            //     align-items: end;
+            //     margin: 0 11px;
+            //     flex-direction: column;
+            // }
+
+            .card__type {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+
+
+        .flip__card:hover .flip__card__inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip__card__front,
+        .flip__card__back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            box-shadow: rgba(240, 196, 180, 0.2) 25px 30px 29px 0px;
+        }
+
+        .flip__card__front {
+            // background-color: #c2dff3;
+            background: linear-gradient(45deg, #343a40, #666666, #343a40);
+            color: black;
+            border-radius: 20px;
+        }
+
+        .flip__card__back {
+            border-radius: 20px;
+            background-color: #bbb;
+            color: white;
+            transform: rotateY(180deg);
+
+            .code {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                padding: 10px 20px;
+
+            }
+
+
+        }
+
+        .copy {
+            margin: 10px 10px;
+
+            .fullNumber {
+                display: flex;
+                justify-content: center;
+                margin: 0 auto;
+
+                .copy__value {
+                    border: none;
+                    padding: 0 10px;
+                }
+            }
+
+            .fullNumberBtn {
+                display: flex;
+                justify-content: center;
+                width: 200px;
+                height: 20px;
+                margin: 10px auto;
+                border-radius: 10px;
+                margin-bottom: 21px;
+
+            }
+        }

@@ -1,0 +1,43 @@
+.myCards__container {
+    width: 500px;
+    margin: 50px auto;
+    height: 600px;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    box-shadow: rgba(100, 100, 111, 0.2) 25px 30px 29px 0px;
+
+    .side {
+        width: 30%;
+        background: #faf0ef;
+        height: 100%;
+    }
+
+    .main {
+        width: 70%;
+
+        .logo__container {
+            display: flex;
+            padding: 10px 20px;
+
+            .logo {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        .myCards__title {
+            background: #faf0ef;
+            padding: 10px;
+            // box-shadow: rgba(100, 100, 111, 0.2) 25px 30px 29px 0px;
+        }
+
+
+    }
+}
+
+// "country":"UK",
+// "date":"23/25",
+// "svv":"543",
+// "type":"debit",
+// "aspect":"MasterCard"
