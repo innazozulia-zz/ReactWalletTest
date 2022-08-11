@@ -16,8 +16,10 @@ npm packages :
 1. backend: mock API;
 2. requests :  axios ;
 3. styles: react module, node-sass, react-icons, react-slick, react-carousel;
-4. navigation: react-router-dom;
-5. forms: react-hook-form
+4. sign in display time and date: react-moment;
+5. navigation: react-router-dom;
+6. forms: react-hook-form;
+
 
 ######
 
