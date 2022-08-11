@@ -29,3 +29,12 @@ Main functionality:
 - cleansing the balance
 - mask for displaying the card number
 - the ability to copy the card number
+
+
+Functionality not implemented:
+- validation (Luhn algorithm)
+- displaying the balance described in the specification
+- using api services for verification
+
+
+there was not enough time to complete the tasks on all items
