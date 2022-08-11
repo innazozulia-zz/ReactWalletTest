@@ -11,8 +11,8 @@
         text-decoration: none;
         display: flex;
         align-items: center;
-        // margin-bottom: 50px;
-        // padding: 20px 5px;
+        flex-direction: column;
+        margin: 0 auto;
     }
 
     .user {

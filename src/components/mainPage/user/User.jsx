@@ -8,6 +8,7 @@ const User = () => {
       <Link className={style.link} to="/homepage">
         <img className={style.user} src="user.jpeg" alt="user" />
         <p className={style.user__name}>John Doe</p>
+        <p className={style.user__name}>Home Page</p>
       </Link>
     </div>
   );

@@ -19,6 +19,7 @@
         .logo__container {
             display: flex;
             padding: 10px 20px;
+            justify-content: space-between;
 
             .logo {
                 width: 40px;
@@ -29,15 +30,8 @@
         .myCards__title {
             background: #faf0ef;
             padding: 10px;
-            // box-shadow: rgba(100, 100, 111, 0.2) 25px 30px 29px 0px;
         }
 
 
     }
 }
-
-// "country":"UK",
-// "date":"23/25",
-// "svv":"543",
-// "type":"debit",
-// "aspect":"MasterCard"

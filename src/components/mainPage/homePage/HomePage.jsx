@@ -33,17 +33,16 @@ const HomePage = () => {
           <h5 className={style.review__title}>Amound overview</h5>
           {card.map((item) => (
             <div key={item.id}>
-              {item.name}: {item.balance}
+              {item.bank}: {item.balance}
               {item.currency}
+              {item.currency === "usd" ? (
+                <div>USD balance{item.balance}</div>
+              ) : null}
+              {item.currency === "uah" ? (
+                <div>UAH balance {item.balance}</div>
+              ) : null}
             </div>
           ))}
-          <div className={style.totalCardsUah}></div>
-          <div className={style.totalCardsUsd}></div>
-          <div className={style.myCards}>
-            {/* <ul>
-              <li> balance={item.balance}</li>
-            </ul> */}
-          </div>
         </div>
         <div className={style.sendMoney}>
           <div className={style.senMoneyItem}>

@@ -16,21 +16,6 @@
 
             }
 
-            // .number {
-            //     margin: 6px 10px;
-            //     font-size: 21px;
-            //     font-weight: 400;
-            //     color: white;
-            // }
-
-            // .date {
-            //     display: flex;
-            //     flex-direction: column;
-            //     align-items: end;
-            //     margin: 0 11px;
-            //     flex-direction: column;
-            // }
-
             .card__type {
                 width: 30px;
                 height: 30px;
@@ -54,7 +39,6 @@
         }
 
         .flip__card__front {
-            // background-color: #c2dff3;
             background: linear-gradient(45deg, #343a40, #666666, #343a40);
             color: black;
             border-radius: 20px;
@@ -100,5 +84,11 @@
                 border-radius: 10px;
                 margin-bottom: 21px;
 
+            }
+
+            .edit__balance {
+                display: flex;
+                justify-content: center;
+                margin: 0 auto;
             }
         }

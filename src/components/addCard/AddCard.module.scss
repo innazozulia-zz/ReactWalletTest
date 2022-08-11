@@ -23,30 +23,18 @@
             padding: 10px;
         }
 
-        .logo__container {
-            display: flex;
-            padding: 10px 20px;
-
-            .logo {
-                width: 40px;
-                height: 40px;
-            }
-        }
-
         .form__component {
             display: flex;
             flex-direction: column;
             max-width: 240px;
-            height: 381px;
+            height: 484px;
             margin: 30px auto;
-            border: 2px solid #dad6d6;
-            padding: 20px 40px;
+            padding: 11px 40px;
             border-radius: 20px;
-            box-shadow: rgba(100, 100, 111, 0.2) 25px 30px 29px 0px;
 
             .form__item {
                 padding: 2px 10px;
-                margin-bottom: 15px;
+                margin-bottom: 2px;
             }
 
             span {

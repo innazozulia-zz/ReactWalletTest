@@ -7,6 +7,10 @@ import axios from "axios";
 import style from "./AddCard.module.scss";
 const AddCard = () => {
   const [inputValue, setInputValue] = React.useState("");
+  const [inputValueCardName, setInputValueCardName] = React.useState("");
+  const [inturValueCardType, setInputValueCardType] = React.useState("");
+  const [inputValueKeyTakeaways, setInpurValueKeyTakeaways] =
+    React.useState("");
   const [inputValueCardNumber, setInputValueCardNumber] = React.useState("");
   const [inputValueCardDate, setInputValueCardDate] = React.useState("");
   const [inputValueCardYear, setInputValueCardYear] = React.useState("");
@@ -31,11 +35,17 @@ const AddCard = () => {
       inputValueCardDate.length === 2 &&
       inputValueCVV.length === 3 &&
       inputValueCardYear.length === 4 &&
-      inputValueCardAmound
+      inputValueCardAmound &&
+      inputValueCardName &&
+      inturValueCardType &&
+      inputValueKeyTakeaways
     ) {
       axios
         .post("https://62f2327f18493ca21f2e67ff.mockapi.io/card", {
           name: inputValue,
+          bank: inputValueCardName,
+          type: inturValueCardType,
+          key: inputValueKeyTakeaways,
           number: inputValueCardNumber,
           date: inputValueCardDate,
           year: inputValueCardYear,
@@ -48,7 +58,10 @@ const AddCard = () => {
         });
     }
     if (axios) {
+      setInputValueCardName("");
       setInputValueCardNumber("");
+      setInputValueCardType("");
+      setInpurValueKeyTakeaways("");
       setInputValueCardDate("");
       setInputValueCardYear("");
       setInputValueCVV("");
@@ -63,14 +76,28 @@ const AddCard = () => {
         <Navigation />
       </div>
       <div className={style.main}>
-        <div className={style.logo__container}>
-          <img className={style.logo} src="logo.png" alt="logo" />
-          <p>Your Wallet</p>
-        </div>
         <div className={style.main__content}>
           <h4 className={style.addCard__title}>Add new card</h4>
           <div className={style.form__component}>
             <form onSubmit={handleSubmit(onSubmit)}>
+              <div className={style.form__item}>
+                <input
+                  id="cardName"
+                  value={inputValueCardName}
+                  placeholder="Card  bank name"
+                  aria-invalid={errors.name ? "true" : "false"}
+                  {...register("cardName", { required: true, maxLength: 30 })}
+                  onChange={(e) => {
+                    setInputValueCardName(e.target.value);
+                  }}
+                />
+                {errors.cardName && errors.cardName.type === "required" && (
+                  <span role="alert">
+                    <MdWarningAmber className={style.icon} />
+                    This is required
+                  </span>
+                )}
+              </div>
               <div className={style.form__item}>
                 <input
                   id="name"
@@ -81,6 +108,46 @@ const AddCard = () => {
                     onChange: (e) => setInputValue(e.target.value),
                   })}
                 />
+              </div>
+              <div className={style.form__item}>
+                <input
+                  id="cardType"
+                  value={inturValueCardType}
+                  placeholder="debit/credit"
+                  aria-invalid={errors.name ? "true" : "false"}
+                  {...register("cardType", { required: true, maxLength: 10 })}
+                  onChange={(e) => {
+                    setInputValueCardType(e.target.value);
+                  }}
+                />
+                {errors.cardType && errors.cardType.type === "required" && (
+                  <span role="alert">
+                    <MdWarningAmber className={style.icon} />
+                    This is required
+                  </span>
+                )}
+              </div>
+              <div className={style.form__item}>
+                <input
+                  id="cardKey"
+                  value={inputValueKeyTakeaways}
+                  placeholder="Visa/MasterCard"
+                  aria-invalid={errors.name ? "true" : "false"}
+                  {...register("inputValueKeyTakeaways", {
+                    required: true,
+                    maxLength: 10,
+                  })}
+                  onChange={(e) => {
+                    setInpurValueKeyTakeaways(e.target.value);
+                  }}
+                />
+                {errors.inputValueKeyTakeaways &&
+                  errors.inputValueKeyTakeaways.type === "required" && (
+                    <span role="alert">
+                      <MdWarningAmber className={style.icon} />
+                      This is required
+                    </span>
+                  )}
               </div>
               <div className={style.form__item}>
                 <input
@@ -122,7 +189,7 @@ const AddCard = () => {
                 <input
                   id="carDate"
                   value={inputValueCardDate}
-                  placeholder="Card Date"
+                  placeholder="Date (2 symbols)"
                   type="number"
                   aria-invalid={errors.carDate ? "true" : "false"}
                   {...register("carDate", {
@@ -158,7 +225,7 @@ const AddCard = () => {
                 <input
                   id="cardYear"
                   value={inputValueCardYear}
-                  placeholder="Card Year"
+                  placeholder="Year (4 symbols)"
                   type="number"
                   aria-invalid={errors.carDate ? "true" : "false"}
                   {...register("cardYear", {
@@ -194,7 +261,7 @@ const AddCard = () => {
                 <input
                   id="cardCVV"
                   value={inputValueCVV}
-                  placeholder="Card CVV"
+                  placeholder="CVV (3 symbols)"
                   type="number"
                   aria-invalid={errors.cardCVV ? "true" : "false"}
                   {...register("cardCVV", {
@@ -255,6 +322,7 @@ const AddCard = () => {
                   value={inputValueCurrency}
                   onChange={(e) => setInputValueCurrency(e.target.value)}
                 >
+                  <option value="">choose ...</option>
                   <option value="uah">uah</option>
                   <option value="usd">usd</option>
                 </select>

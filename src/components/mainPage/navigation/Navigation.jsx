@@ -5,11 +5,8 @@ import style from "./Navigation.module.scss";
 const Navigation = () => {
   return (
     <div className={style.navigation}>
-      <Link className={style.link} to="/myCards">
+      <Link className={style.link} to="/mycards">
         My Cards
-      </Link>
-      <Link className={style.link} to="/total">
-        Total
       </Link>
       <Link className={style.link} to="/addcard">
         Add Card

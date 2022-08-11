@@ -6,6 +6,7 @@ import Card from "../card/Card";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
 import style from "./MyCards.module.scss";
 
 const MyCards = () => {
@@ -20,6 +21,7 @@ const MyCards = () => {
     slidesToScroll: 1,
   };
 
+  //get cards
   React.useEffect(() => {
     axios
       .get("https://62f2327f18493ca21f2e67ff.mockapi.io/card")
@@ -29,22 +31,27 @@ const MyCards = () => {
       });
   }, []);
 
-  //   setCard(
-  //   card.filter((card) => {
-  //     return card.id !== id;
-  //   })
-
+  //delete card
   const deleteCard = (id) => {
     if (window.confirm("Are you sure?")) {
-      axios.delete(`https://62f2327f18493ca21f2e67ff.mockapi.io/card/${id}`);
-      // axios.delete(`${id}`);
-      setCard(
-        card.filter((card) => {
-          return card.id !== id;
+      axios
+        .delete(`https://62f2327f18493ca21f2e67ff.mockapi.io/card/${id}`)
+        .then((resp) => {
+          let data = resp.data;
+          console.log(data);
+          setCard(
+            card.filter((item) => {
+              return item.id !== id;
+            })
+          );
         })
-      );
+        .catch((resp) => {
+          let data = resp.response.data;
+          console.log(data);
+        });
     }
   };
+
   return (
     <div className={style.myCards__container}>
       <div className={style.side}>
@@ -67,12 +74,11 @@ const MyCards = () => {
                 year={item.year}
                 securityCode={item.security}
                 type={item.type}
-                aspect={item.aspect}
                 balance={item.balance}
                 currency={item.currency}
-                name={item.name}
-                img={item.img}
+                keyValue={item.key}
                 itemId={item.id}
+                bank={item.bank}
                 deleteCard={deleteCard}
               />
             ))}
