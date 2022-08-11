@@ -10,10 +10,10 @@ Technologies: ReactJS
 
 npm packages : 
 
-backend: mock API;
-requests :  axios ;
-styles: react module, node-sass, react-icons, react-slick, react-carousel;
-navigation: react-router-dom;
-forms: react-hook-form
+1. backend: mock API;
+2. requests :  axios ;
+3. styles: react module, node-sass, react-icons, react-slick, react-carousel;
+4. navigation: react-router-dom;
+5. forms: react-hook-form
 
 
